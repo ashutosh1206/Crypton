@@ -6,9 +6,9 @@ Prerequisite:
 2. Padding
 
 
-## ECB mode
+## ECB mode (Electronic CodeBook)
 
-This is the simplest mode of encryption. ECB - Electronic Codebook. The padded message is divided into blocks and each block is encrypted separately using the block cipher algorithm (AES, DES, etc.). The encryption and decryption takes place as follows:
+This is the simplest mode of encryption. The padded message is divided into blocks and each block is encrypted separately using the block cipher algorithm (AES, DES, etc.). The encryption and decryption takes place as follows:
 
 ![picture1](https://upload.wikimedia.org/wikipedia/commons/d/d6/ECB_encryption.svg)
 
@@ -21,6 +21,14 @@ Here are two images, the second is an encrypted image of the first image, and as
 
 ![plainimage](https://upload.wikimedia.org/wikipedia/commons/5/56/Tux.jpg)
 ![cipherimage](https://upload.wikimedia.org/wikipedia/commons/f/f0/Tux_ecb.jpg)
+
+
+## CBC mode (Cipher Block Chaining)
+
+This mode is one of the most commonly used mode of encryption. In this mode of encryption, the plaintext is XORed with the ciphertext of the previous block before giving as an input to the block cipher. For the first block, plaintext is XORed with an IV (Initialisation Vector) which can be assigned a value as per choice. The encryption takes place as follows (Assuming the first block has index 1): C<sub>i</sub>: E<sub>k</sub>(P<sub>i</sub> xor C<sub>i-1</sub>),  C<sub>0</sub> = IV. The decryption takes place as follows (Assuming the first block has index 1): P<sub>i<sub>: D(C<sub>i</sub>) xor C<sub>i-1</sub>. This is the picturised representation of encryption-decryption algorithms:
+
+![encryption](https://upload.wikimedia.org/wikipedia/commons/8/80/CBC_encryption.svg)
+![decryption](https://upload.wikimedia.org/wikipedia/commons/2/2a/CBC_decryption.svg)
 
 
 ## References
