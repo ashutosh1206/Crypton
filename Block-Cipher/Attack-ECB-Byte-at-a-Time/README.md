@@ -1,7 +1,7 @@
 # ECB Byte at a Time Attack
 
 Before getting acquainted with the attack, one must know the following:
-1. Working of encryption/decryption in a block cipher
+1. ECB mode of encryption
 2. Block Size detection
 3. Block Cipher mode detection
 
