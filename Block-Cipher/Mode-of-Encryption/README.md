@@ -25,7 +25,7 @@ Here are two images, the second is an encrypted image of the first image, and as
 
 ## CBC mode (Cipher Block Chaining)
 
-This mode is one of the most commonly used mode of encryption. In this mode of encryption, the plaintext is XORed with the ciphertext of the previous block before giving as an input to the block cipher. For the first block, plaintext is XORed with an IV (Initialisation Vector) which can be assigned a value as per choice. The encryption takes place as follows (Assuming the first block has index 1): C<sub>i</sub>: E<sub>k</sub>(P<sub>i</sub> xor C<sub>i-1</sub>),  C<sub>0</sub> = IV. The decryption takes place as follows (Assuming the first block has index 1): P<sub>i<sub>: D(C<sub>i</sub>) xor C<sub>i-1</sub>. This is the picturised representation of encryption-decryption algorithms:
+This mode is one of the most commonly used mode of encryption. In this mode of encryption, the plaintext is XORed with the ciphertext of the previous block before giving as an input to the block cipher. For the first block, plaintext is XORed with an IV (Initialisation Vector) which can be assigned a value as per choice. The encryption takes place as follows (Assuming the first block has index 1): C<sub>i</sub>: E<sub>k</sub>(P<sub>i</sub> xor C<sub>i-1</sub>),  C<sub>0</sub> = IV. The decryption takes place as follows (Assuming the first block has index 1): P<sub>i</sub> = D(C<sub>i</sub>) xor C<sub>i-1</sub>. This is the picturised representation of encryption-decryption algorithms:
 
 ![encryption](https://upload.wikimedia.org/wikipedia/commons/8/80/CBC_encryption.svg)
 ![decryption](https://upload.wikimedia.org/wikipedia/commons/2/2a/CBC_decryption.svg)
