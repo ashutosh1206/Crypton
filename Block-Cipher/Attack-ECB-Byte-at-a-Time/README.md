@@ -17,7 +17,7 @@ In the beginning, as an attacker we have no idea about:
 1. Block size of encryption system
 2. Block cipher mode of encryption
 
-So, our first task is to know about all of them, which we have already discussed in other topics under `Block Cipher`.
+So, our first task is to know about the above two characteristics, which we have already discussed in topics under `Block Cipher`.
 Let us now consider that using the previous articles written, we now know about the block size and the block cipher mode of encryption. The attacker's motive is to get the value of the secret. Suppose we send an input to the server of size equal to the blocksize of the cipher, let us analyse the block division of the string being encrypted: 
 ```
         1st Block | 2nd Block | 3rd Block | ...
