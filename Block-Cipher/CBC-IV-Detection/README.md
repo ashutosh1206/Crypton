@@ -12,12 +12,16 @@ Assuming that you might have read about CBC mode of encryption by now, we can mo
 
 We will write down equations for each plaintext block: (First block of plaintext as p1, second as p2 and so on)
 p1 = D(c1) xor iv
+
 p2 = D(c2) xor c1
+
 p3 = D(c3) xor c2
 
 When c1 = c3 and c2 is an empty block, i.e. c2 = "\x00"*blocksize, then 
 p1' = D(c1) xor iv
+
 p2' = D("\x00"*blocksize) xor c1
+
 p3' = D(c3 = c1) xor "\x00"*blocksize = D(c1)
 
 We can now simply calculate iv as `p1' xor p3'`. So we call the decryption oracle and give the ciphertext input as `c1 + "\x00"*blocksize + c1`. We can now take the first block of plaintext output and the third block of plaintext output to get IV as explained above. 
