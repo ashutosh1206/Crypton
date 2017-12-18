@@ -1,1 +1,0 @@
-Check the challenge [here](http://cryptopals.com/sets/2/challenges/12)
