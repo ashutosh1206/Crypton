@@ -31,5 +31,16 @@ This mode is one of the most commonly used mode of encryption. In this mode of e
 ![decryption](https://upload.wikimedia.org/wikipedia/commons/2/2a/CBC_decryption.svg)
 
 
+## CTR mode (Counter Mode)
+
+This mode of encryption converts a block cipher into a stream cipher. Picturised representation of CTR mode of encryption/decryption:
+
+![encryption](https://upload.wikimedia.org/wikipedia/commons/4/4d/CTR_encryption_2.svg)
+![decryption](https://upload.wikimedia.org/wikipedia/commons/3/3c/CTR_decryption_2.svg)
+
+As the picture suggests, a stream of bytes is encrypted using the block cipher encryption algorithm instead of the plaintext bytes being encrypted. The encrypted stream of bytes are then XORed with the plaintext to give the corresponding ciphertext. A point to be noted here is that the stream of bytes for each block should be unique or otherwise it would lead to some serious security issues. That is why we use a counter inside the stream of bytes being encrypted along with a unique string called the `nonce`. The nonce remains the same for each block, but the counter value increases by 1 for each block. Note that in this mode, there is no need of decryption oracle as the stream of bytes are always being encrypted using the block cipher and then xored. We just have to XOR it with ciphertext/plaintext depending on whether we are going to decrypt/encrypt respectively. 
+
+
+
 ## References
 1. [Wikipedia- Block cipher mode of operation](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation)
