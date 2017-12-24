@@ -49,10 +49,10 @@ After receiving the ciphertext c from Bob, Alice computes the following to get b
 ### Proof of decryption using Euler's Theorem
 Read about Euler's Theorem [here](https://en.wikipedia.org/wiki/Euler%27s_theorem)
 
-    c = M<sup>e</sup> mod n
-    c<sup>d</sup> mod n = M<sup>e*d</sup> mod n
-    Since we have from Euler's theorem that: ![equation](https://latex.codecogs.com/png.latex?a^{\varphi (n)} \equiv 1 \pmod{n}), we can now write
-    M<sup>e*d</sup> = M<sup>1+h*![equation](https://latex.codecogs.com/png.latex?{\varphi(n)})</sup> ≡ M*((1)<sup>h</sup>) ≡ M mod n
+c = M<sup>e</sup> mod n
+c<sup>d</sup> mod n = M<sup>e*d</sup> mod n
+Since we have from Euler's theorem that: ![equation](https://latex.codecogs.com/png.latex?a^{\varphi (n)} \equiv 1 \pmod{n}), we can now write
+M<sup>e*d</sup> = M<sup>1+h*![equation](https://latex.codecogs.com/png.latex?{\varphi(n)})</sup> ≡ M*((1)<sup>h</sup>) ≡ M mod n
 
 
 Read about RSA here: [Wikipedia](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
