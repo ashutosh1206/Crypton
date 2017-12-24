@@ -1,0 +1,22 @@
+from Crypto.Util.number import *
+
+flag = open("flag.txt").read()
+flag = int(flag.encode("hex"),16)
+
+p = getPrime(512)
+q = getPrime(512)
+n = p*q
+phin = (p-1)*(q-1)
+
+encryption_keys = [34961, 3617491, 68962801, 293200159531, 1191694878666066510321450623792489136756229172407332230462797663298426983932272792657383336660801913848162204216417540955677965706955404313949733712340714861638106185597684745174398501025724130404133569866642454996521744281284226124355987843894614599718553178595963014434904833]
+
+for i in encryption_keys:
+    assert GCD(i,phin) == 1
+
+for i in encryption_keys:
+    flag = pow(flag, i, n)
+
+flag = hex(flag)[2:].replace("L","")
+
+obj1 = open("ciphertext.txt",'w')
+obj1.write(flag)
