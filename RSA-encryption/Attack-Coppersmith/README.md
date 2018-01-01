@@ -20,7 +20,7 @@ In this scenario, we know the most the significant bits of the message. Applying
 ```
     P.<x> = PolynomialRing(Zmod(N))
     beta = 1
-    dd = f.degree    # Degree of the polynomial
+    dd = f.degree()    # Degree of the polynomial
     epsilon = beta/7
     XX = ceil(N**((beta**2/dd) - epsilon))
     f.small_roots(XX, beta, epsilon)
@@ -33,7 +33,7 @@ In this scenario we know the most significant bits of one of the factors of the 
 ```
     P.<x> = PolynomialRing(Zmod(N))
     beta = 0.5
-    dd = f.degree    # Degree of the polynomial
+    dd = f.degree()    # Degree of the polynomial
     epsilon = beta/7
     XX = ceil(N**((beta**2/dd) - epsilon))
     f.small_roots(XX, beta, epsilon)

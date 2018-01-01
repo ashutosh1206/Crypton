@@ -22,10 +22,20 @@ where **b<sub>i</sub> = N/N<sub>i</sub>** , **b<sub>i</sub><sup>'</sup> = b<sub>
 Hastad also showed that applying `linear padding` to the message M prior to encryption does not protect from this attack. Assuming C<sub>i</sub> = f<sub>i</sub>(M)<sup>e</sup> for 1<=i<=k (k --> number of individuals the message is to be sent/has been sent). Here f<sub>i</sub> is a linear function to pad the message M, so that the recipients receive slightly different messages. For ith individual, Message M = i*2<sup>m</sup> + M, where m is the number of bits in M. Hastad proved that a system of univariate equations modulo relatively prime composites, such as applying fixed polynomial ![equation](https://latex.codecogs.com/png.latex?{\displaystyle&space;g_{i}(M)\equiv&space;0{\pmod&space;{N_{i}}}}) could be solved if sufficient equations are provided. This attack is an application of Chinese Remainder Theorem and Coppersmith's Theorem.  
 ![proof](https://i.imgur.com/ivFhUEj.png)
 
+    Exploit in a Nutshell:
+    1. Calculate N = n1*n2*... 
+    2. Calculate each element T[j] as per the above conditions using CRT
+    3. Assign P.<x> = PolynomialRing(Zmod(N))
+    4. g[j] = (i*(2^m) + x)^e - c, where the message is padded using the above conditions
+    5. Assign g = Sum_of(T[j] * g[j])
+    6. Check if g is a monic polynomial, if not transform it into a monic polynomial
+    7. Find small roots of g and check if that is the flag
+
 
 
 ## Resources
 1. [Wikipedia- Coppersmith's Attack](https://en.wikipedia.org/wiki/Coppersmith%27s_attack)
 2. [Wikipedia- Chinese Remainder Theorem](https://en.wikipedia.org/wiki/Chinese_remainder_theorem)
+3. [Cryptanalysis of RSA using Lattice Methods](http://theory.stanford.edu/~gdurf/durfee-thesis-phd.pdf)
 
 
