@@ -21,6 +21,7 @@ We can then write the polynomials g<sub>1</sub>(x) and g<sub>2</sub>(x) as:
 ![equation](https://latex.codecogs.com/png.latex?g_{2}(x)=x^{e}-C_{2}\in&space;{\mathbb&space;{Z}}_{N}[x])  
 So clearly M<sub>2</sub> is a root of both the polynomials above and hence they have a common factor **x-M<sub>2</sub>** (Since, g<sub>1</sub>(M<sub>2</sub>) = 0 and g<sub>2</sub>(M<sub>2</sub>) = 0)
 Therefore, we can simply calculate GCD of g<sub>1</sub> and  g<sub>2</sub> and if the resultant polynomial is linear, then we get out M<sub>2</sub> and hence M<sub>1</sub>!  
+  
     Exploit in a nutshell:
     1. Calculate g1 and g2 as given above
     2. Calculate GCD(g1, g2) and check if the resultant polynomial is linear or not
