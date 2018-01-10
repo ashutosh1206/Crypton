@@ -1,7 +1,7 @@
 # Wiener's Attack
 
 Prerequisites: 
-1. RSA encryption/decryption
+1. [RSA encryption/decryption](https://github.com/ashutosh1206/Crypton/blob/master/RSA-encryption/README.md)
 2. [Continued Fractions](https://en.wikipedia.org/wiki/Continued_fraction) --> Read only basic intro to get an idea of what are continued fractions and also about Infinite Continued Fractions to get a basic idea of convergents
 
 Wiener's Attack is based on the vulnerability that when d < N<sup>0.25</sup>, then the one of the convergents of Continued Fraction of `e/N` is `k/d` where k satisfies this equation: ![equation](https://latex.codecogs.com/png.latex?ed-k\varphi&space;(N)=1). This equation is derived from: ![equation](https://latex.codecogs.com/png.latex?ed\equiv&space;1{\bmod\varphi}(N)). We will see what exactly does the above statement mean and also see its proof in this write-up. To understand the statement above, it is essential to understand what are continued fractions and the concept of convergents in infinite fractions. Considering the reader has read it using the link provided in the `Prerequisites` section, we will discuss why convergents are important by understanding how the attack works.
