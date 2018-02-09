@@ -1,4 +1,4 @@
-basic_fermat(n):
+def basic_fermat(n):
     a = ceil(sqrt(n))
     b2 = a^2 - n
     while not is_square(b2):

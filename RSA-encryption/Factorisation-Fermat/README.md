@@ -12,7 +12,7 @@ We can use the above fact to factorise modulus N in RSA when the difference betw
 To implement basic approach of Fermat's Factorisation, we can do the following:
 1. Calculate `a` as ceil of square root of N
 2. Calculate b2 = a**2 - N
-3. Check if b2 is a perfect square. If b2 is a perfect square then return a - Square_root(b) and a + Square_root(b) as the factors. If not, do the following:
+3. Check if b2 is a perfect square. If b2 is a perfect square then return a - Square_root(b) and a + Square_root(b) as the factors. If not, do the following:  
    a. Increment a by 1, i.e. a += 1
    b. Calculate b2 again as a**2 - N
    c. Repeat Step-3
