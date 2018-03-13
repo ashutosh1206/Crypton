@@ -2,7 +2,7 @@
 
 **Level**: 1  
   
-**Description**: You are given ciphertext of a message that is encrypted using `encrypt.py` and stored in `ciphertext.py`. Also, private key values are stored in `privatekey.txt`. Get the flag and score some points!
+**Description**: You are given ciphertext of a message that is encrypted using `encrypt.py` and stored in `ciphertext.txt`. Also, private key values are stored in `privatekey.txt`. Get the flag and score some points!
   
 **Points**: 10  
   

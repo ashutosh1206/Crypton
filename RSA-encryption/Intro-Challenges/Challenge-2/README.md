@@ -2,7 +2,7 @@
 
 **Level**: 1  
   
-**Description**: You are given ciphertext of a message that is encrypted using `encrypt.py` and stored in `ciphertext.py`. Also, you are given public key parameters in `publickey.pem`, get the flag and score some points!  
+**Description**: You are given ciphertext of a message that is encrypted using `encrypt.py` and stored in `ciphertext.txt`. Also, you are given public key parameters in `publickey.pem`, get the flag and score some points!  
   
 **Points**: 15  
   
