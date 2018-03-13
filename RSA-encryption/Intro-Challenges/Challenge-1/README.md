@@ -1,8 +1,8 @@
 # Challenge-1
-  
+
 **Level**: 1  
   
-**Description**: A simple walkthrough over how `unpadded RSA encryption` works. You are given the ciphertext encryted using RSA in `ciphertext.txt` and `encrypt.py` is used to encrypt the flag. Read how the encryption works from `encrypt.py`, calculate d using p,q given and hence get the flag.  
+**Description**: You are given ciphertext of a message that is encrypted using `encrypt.py` and stored in `ciphertext.py`. Also, private key values are stored in `privatekey.txt`. Get the flag and score some points!
   
 **Points**: 10  
   
