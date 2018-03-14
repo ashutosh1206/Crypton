@@ -11,6 +11,7 @@ Basic challenges to start with RSA and challenges applying trivial theorems from
 | 4     | [Challenge-3](Challenge-3/) | _None_      | 2                | 20     |
 | 5     | [Challenge-4](Challenge-4/) | _None_      | 3                | 30     |
 | 6     | [C4-reloaded](C4-reloaded/) | _None_      | 3                | 35     |
+| 7     | [Meth_M4th](Meth_M4th/)     | _None_      | 4                | 45     |
   
 
 ## Usage
