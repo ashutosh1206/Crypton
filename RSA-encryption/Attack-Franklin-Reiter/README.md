@@ -27,8 +27,8 @@ Therefore, we can simply calculate GCD of g<sub>1</sub> and  g<sub>2</sub> and i
     2. Calculate GCD(g1, g2) and check if the resultant polynomial is linear or not
     3. If the resultant polynomial is linear, then return GCD
   
-Check the **implementation** of the above attack [here](exploit.py)
+Check the **implementation** of the above attack [here](exploit.sage)
   
 ## References
-1. [Wikipedia- Frankline Reiter's related message attack](https://en.wikipedia.org/wiki/Coppersmith%27s_attack#Franklin-Reiter_related-message_attack)
+1. [Wikipedia- Franklin Reiter's related message attack](https://en.wikipedia.org/wiki/Coppersmith%27s_attack#Franklin-Reiter_related-message_attack)
 
