@@ -14,11 +14,13 @@ Basic challenges to start with RSA and challenges applying trivial theorems from
 | 7     | [C4-reloaded](C4-reloaded/)                       | _None_      | 3                | 35     |
 | 8     | [Meth_M4th](Meth_M4th/)                           | _None_      | 4                | 45     |
 | 9     | [Labyrinth-of-Suffering](Labyrinth-of-Suffering/) | _None_      | 4                | 50     |
+| 9     | [LoS-reloaded](LoS-reloaded/)                     | _None_      | 5                | 60     |
   
 
 ## Usage
-Step-1: Move to the directory using the terminal where you want this challenges locally  
-Step-2: Install svn using the following terminal commands:  
+Before starting with solving the challenges, it is important that you download them. You can do it using the below steps:  
+**Step-1**: Move to the directory using the terminal where you want these challenges locally  
+**Step-2**: Install svn using the following terminal commands:  
 `sudo apt-get install subversion`  
-Step-3: You can now download this directory using the following svn commands:  
+**Step-3**: You can now download this directory using the following svn commands:  
 `svn checkout https://github.com/ashutosh1206/Crypton/trunk/RSA-encryption/Intro-Challenges/`  
