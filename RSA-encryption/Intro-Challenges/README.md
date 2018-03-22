@@ -12,9 +12,11 @@ Basic challenges to start with RSA and challenges applying trivial theorems from
 | 5     | [Challenge-3](Challenge-3/)                       | _None_      | 2                | 20     |
 | 6     | [Challenge-4](Challenge-4/)                       | _None_      | 3                | 30     |
 | 7     | [C4-reloaded](C4-reloaded/)                       | _None_      | 3                | 35     |
-| 8     | [Meth_M4th](Meth_M4th/)                           | _None_      | 4                | 45     |
-| 9     | [Labyrinth-of-Suffering](Labyrinth-of-Suffering/) | _None_      | 4                | 50     |
-| 9     | [LoS-reloaded](LoS-reloaded/)                     | _None_      | 5                | 60     |
+| 8     | [Dp and Dq](Dp&Dq/)                               | _None_      | 4                | 40     |
+| 9     | [Meth_M4th](Meth_M4th/)                           | _None_      | 4                | 45     |
+| 10    | [Labyrinth-of-Suffering](Labyrinth-of-Suffering/) | _None_      | 4                | 50     |
+| 11    | [LoS-reloaded](LoS-reloaded/)                     | _None_      | 5                | 60     |
+
   
 
 ## Usage
@@ -24,3 +26,8 @@ Before starting with solving the challenges, it is important that you download t
 `sudo apt-get install subversion`  
 **Step-3**: You can now download this directory using the following svn commands:  
 `svn checkout https://github.com/ashutosh1206/Crypton/trunk/RSA-encryption/Intro-Challenges/`  
+  
+  
+## Some useful tools for Integer Factorisation
+1. [Alpertron](https://www.alpertron.com.ar/ECM.HTM)
+2. [Factordb](http://factordb.com/)
