@@ -16,7 +16,7 @@ Basic challenges to start with RSA and challenges applying trivial theorems from
 | 9     | [Meth_M4th](Meth_M4th/)                           | _None_      | 4                | 45     |
 | 10    | [Labyrinth-of-Suffering](Labyrinth-of-Suffering/) | _None_      | 4                | 50     |
 | 11    | [LoS-reloaded](LoS-reloaded/)                     | _None_      | 5                | 60     |
-
+| 12    | [7h3_Godf4ther](7h3_Godf4ther/)                   | _None_      | 6                | 100    |
   
 
 ## Usage
