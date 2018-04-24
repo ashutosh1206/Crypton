@@ -18,8 +18,8 @@ d = inverse(e, phin)
 # Apply Chinese Remainder Theorem to solve the equations and get d
 # Ref. to: https://crypto.stanford.edu/pbc/notes/numbertheory/crt.html
 # Ref. to: https://en.wikipedia.org/wiki/Chinese_remainder_theorem
-dp = d % p
-dq = d % q
+dp = d % (p-1)
+dq = d % (q-1)
 
 key = RSA.construct((n, long(e)))
 obj1 = open("publickey.pem",'w')
