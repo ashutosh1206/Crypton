@@ -19,7 +19,7 @@ There are different steps involved while encrypting/decrypting data with ElGamal
 ## Key Generation
 This is the first step in the process of transferring a messages securely, between Alice and Bob. In this step, Alice does the following: 
 1. Selects a Cyclic Group `G` of order `q` and generator `g`
-2. Selects a random number `x` --> {1, ..., q-1}
+2. Selects a random number `x` such that `1 <= x <= q-1`
 3. Calculates ![picture1](Pictures/picture1.gif)
 4. Shares `h`, `g`, `q` as Public Key
 5. `x` is the Private Key which only Alice should know, and that's where the security of the encryption system lies.
@@ -87,6 +87,7 @@ def decrypt(c1, c2, g, q, x):
 	return m
 ```
   
+Check out the complete trivial implementation/example of ElGamal encryption/decryption [here](example.py)
 
 ## References
 1. [Wikipedia- ElGamal Encryption](https://en.wikipedia.org/wiki/ElGamal_encryption)
