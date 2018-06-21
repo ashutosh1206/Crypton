@@ -2,7 +2,7 @@
   
 **Level**: 4
   
-**Description**: Time to learn/revise Chinese Remainder Theorem
+**Description**: No need!
   
 **Points**: 40
   
