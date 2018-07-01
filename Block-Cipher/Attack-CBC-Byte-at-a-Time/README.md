@@ -5,7 +5,7 @@ Prerequisites:
 2. [CBC mode of encryption](https://github.com/ashutosh1206/Crypton/tree/master/Block-Cipher/Mode-of-Encryption)
 3. [ECB Byte at a time Attack](https://github.com/ashutosh1206/Crypton/tree/master/Block-Cipher/Attack-ECB-Byte-at-a-Time)
 
-The attack is almost similar too, and the exploit script will also be the same in both cases. They only differ in their computations, since in CBC mode plaintext is XORed with the ciphertext of the previous block, but we don't have to worry about it in our attack, since the server does the job.  
+The attack is almost similar to ECB Byte at a time attack, and the exploit script will also be the same in both cases. They only differ in their computations, since in CBC mode plaintext is XORed with the ciphertext of the previous block, but we don't have to worry about it in our attack, since the server does the job. You can read about the attack in detail [here](https://grocid.net/2016/05/01/byte-wise-decryption-of-aes-cbc/)  
 Check out an example for this attack [here](exploit.py)
   
 # References
