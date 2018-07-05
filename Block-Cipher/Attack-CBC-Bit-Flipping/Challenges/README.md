@@ -1,7 +1,8 @@
-# Challenge
-This directory deals with the challenges based on a particular attack (CBC Bit Flipping Attack here). Here is the list of challenges:
+# Challenges
+  
 
-1. Secret_Server (HITCON 2017)
-2. Cryptopals [Challenge 16](http://cryptopals.com/sets/2/challenges/16)
-    Writeup: [My Writeup](https://github.com/ashutosh1206/Matasano-Crypto-Challenges/blob/master/set2/p16/exploit.py)
-3. CNVService (AceBear Security Contest 2018)
+| S.No. | Challenge                                                            | CTF                      | Year | Difficulty Level | Points |
+|-------|:--------------------------------------------------------------------:|:------------------------:|:----:|:----------------:|:------:|
+| 1     | [Cryptopals Challenge-16](http://cryptopals.com/sets/2/challenges/16)| _None_                   |_None_|     _None_       | _None_ |
+| 2     | [Secret-Server](Secret-Server/)                                      | HITCON Quals             | 2017 |     _None_       | 221    |
+| 3     | [CNVService](CNVService/)                                            | AceBear Security Contest | 2018 |     _None_       | 856    |
