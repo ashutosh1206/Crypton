@@ -1,10 +1,10 @@
 # Mode of encryption
-A block cipher takes in a block of data of size equal to the blocksize, a key (and an IV in some cases). The algorithm does not know of how encryption of each block of data affects the blocks present next to it. This is in fact governed by the mode in which the data is encrypted in a block cipher.
+A block cipher takes in a block of data of size equal to the blocksize, a key (and an IV in some cases). The block cipher algorithm does not know how encryption of each block of data affects the blocks present next to it. This is in fact governed by the mode in which the data is encrypted in a block cipher.
 
 Prerequisite:
-1. Block Cipher
-2. Padding
-
+1. [Block Cipher, Padding](https://github.com/ashutosh1206/Crypton/blob/master/Block-Cipher/README.md)
+  
+  
 
 ## ECB mode (Electronic CodeBook)
 
@@ -21,16 +21,24 @@ Here are two images, the second is an encrypted image of the first image, and as
 
 ![plainimage](https://upload.wikimedia.org/wikipedia/commons/5/56/Tux.jpg)
 ![cipherimage](https://upload.wikimedia.org/wikipedia/commons/f/f0/Tux_ecb.jpg)
-
-
+  
+  
 ## CBC mode (Cipher Block Chaining)
 
-This mode is one of the most commonly used mode of encryption. In this mode of encryption, the plaintext is XORed with the ciphertext of the previous block before giving as an input to the block cipher. For the first block, plaintext is XORed with an IV (Initialisation Vector) which can be assigned a value as per choice. The encryption takes place as follows (Assuming the first block has index 1): C<sub>i</sub>: E<sub>k</sub>(P<sub>i</sub> xor C<sub>i-1</sub>),  C<sub>0</sub> = IV. The decryption takes place as follows (Assuming the first block has index 1): P<sub>i</sub> = D(C<sub>i</sub>) xor C<sub>i-1</sub>. This is the picturised representation of encryption-decryption algorithms:
+This mode is one of the most commonly used mode of encryption. In this mode of encryption, the plaintext is XORed with the ciphertext of the previous block before giving as an input to the block cipher. For the first block, plaintext is XORed with an IV (Initialisation Vector) which can be assigned a value as per choice.  
+  
+The encryption takes place as follows (Assuming the first block has index 1):  
+C<sub>i</sub> = E<sub>k</sub>(P<sub>i</sub> xor C<sub>i-1</sub>),  C<sub>0</sub> = IV  
+  
+The decryption takes place as follows (Assuming the first block has index 1):  
+P<sub>i</sub> = D<sub>k</sub>(C<sub>i</sub>) xor C<sub>i-1</sub>, C<sub>0</sub> = IV  
+  
+Encryption/Decryption in CBC:
 
 ![encryption](https://upload.wikimedia.org/wikipedia/commons/8/80/CBC_encryption.svg)
 ![decryption](https://upload.wikimedia.org/wikipedia/commons/2/2a/CBC_decryption.svg)
-
-
+  
+  
 ## CTR mode (Counter Mode)
 
 This mode of encryption converts a block cipher into a stream cipher. Picturised representation of CTR mode of encryption/decryption:
@@ -38,9 +46,9 @@ This mode of encryption converts a block cipher into a stream cipher. Picturised
 ![encryption](https://upload.wikimedia.org/wikipedia/commons/4/4d/CTR_encryption_2.svg)
 ![decryption](https://upload.wikimedia.org/wikipedia/commons/3/3c/CTR_decryption_2.svg)
 
-As the picture suggests, a stream of bytes is encrypted using the block cipher encryption algorithm instead of the plaintext bytes being encrypted. The encrypted stream of bytes are then XORed with the plaintext to give the corresponding ciphertext. A point to be noted here is that the stream of bytes for each block should be unique or otherwise it would lead to some serious security issues. That is why we use a counter inside the stream of bytes being encrypted along with a unique string called the `nonce`. The nonce remains the same for each block, but the counter value increases by 1 for each block. Note that in this mode, there is no need of decryption oracle as the stream of bytes are always being encrypted using the block cipher and then xored. We just have to XOR it with ciphertext/plaintext depending on whether we are going to decrypt/encrypt respectively. 
-
-
-
+As the picture suggests, a stream of bytes is encrypted using the block cipher encryption algorithm instead of the plaintext bytes being encrypted. The encrypted stream of bytes are then XORed with the plaintext to give the corresponding ciphertext. A point to be noted here is that the stream of bytes for each block should be unique or otherwise it would lead to some serious security issues(Think about what could be the security issues!). That is why we use a counter inside the stream of bytes being encrypted along with a unique string called the `nonce`. The nonce remains the same for each block, but the counter value increases by 1 for each block. Note that in this mode, there is no need of decryption oracle as the stream of bytes are always being encrypted using the block cipher and then xored. We just have to XOR it with ciphertext/plaintext depending on whether we are going to decrypt/encrypt respectively. Note that for a blocksize of 16 bytes, the first 12 bytes are occupied by `nonce` followed by 4 bytes of `counter`.
+  
+  
+  
 ## References
 1. [Wikipedia- Block cipher mode of operation](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation)
