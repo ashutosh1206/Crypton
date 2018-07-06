@@ -6,7 +6,8 @@ Prerequisites:
   
   
 
-ElGamal Encryption System is an Asymmetric Key Encryption System based on Discrete Logarithm Problem (DLP) and Diffie-Hellman Key Exchange. Like every other Public Key encryption, it has a public and a private key, we will see that as we move forward.  
+ElGamal Encryption System is an Asymmetric Key Encryption System based on [Discrete Logarithm Problem](../Discrete-Logarithm-Problem/) (DLP) and Diffie-Hellman Key Exchange. Like every other Public Key encryption, it has a public and a private key, we will see that as we move forward.  
+  
 For illustrative purposes, we will consider `Alice` as the receiver and `Bob` as the sender.  
   
 There are different steps involved while encrypting/decrypting data with ElGamal, let's list them first and then study each of them in detail:  
@@ -87,7 +88,7 @@ def decrypt(c1, c2, g, q, x):
 	return m
 ```
   
-Check out the complete trivial implementation/example of ElGamal encryption/decryption [here](example.py)
+Check out a trivial implementation/example of ElGamal encryption/decryption [here](example.py)
 
 ## References
 1. [Wikipedia- ElGamal Encryption](https://en.wikipedia.org/wiki/ElGamal_encryption)
