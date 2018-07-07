@@ -14,8 +14,8 @@ In this section, the following topics will be covered:
 Suppose Bob wants to authenticate if the person he is going to communicate is really Alice or not. They agree upon a message `M` that Alice will sign and Bob will authenticate. They also agree upon a hashing algorithm that will be used to hash the message `M`. Let us see what happens on each side, ie. Alice (the one who is signing) and Bob's (Verifier) side:  
   
   
-**Alice's Side**:  
-*Step-1*: Alice calculates the hash of the message `M` to be signed using the algorithm agreed upon, let it be `H(M)`.  
+## Signature Generation  
+*Step-1*: Alice calculates the hash of the message `M` to be signed using a hashing algorithm agreed upon, let it be `H(M)`.  
 *Step-2*: She then converts the message string `M` to long integer (Can be done using pycrypto)  
 *Step-3*: **Key Generation** Generates two large primes `p` and `q` using a *strong* pseudo-random number generator (This step is similar to encryption in RSA).  
 *Step-4*: Calculates `n`=`p`*`q`, ![eq1](Pictures/eq1.gif), a public key exponent `e` and ![eq2](Pictures/eq2.gif). (e, n) together makes the public key and (d, n) is the private key, which ofcourse, only Alice knows.  
@@ -42,7 +42,7 @@ def signer(M):
   
   
   
-**Bob's Side**:  
+## Signature Verification  
 *Step-1*: Now that Bob has Alice's signature of hash of message `M`, the message `M` and her public key, he can move forward and verify the signature.  
 *Step-2*: Bob calculates ![eq4](Pictures/eq4.gif) and hence will get ![eq5](Pictures/eq5.gif)  
 *Step-3*: Now Bob calculates hash of the message `M` as `H(M)` and checks if it matches with `pt` obtained above. If it does match then Bob has verified that the person he is communicating is Alice, if it does not match then verification fails.  
@@ -64,4 +64,4 @@ def verifier(pubkey, s, M):
 		raise VerificationError("Verification Failed!")
 ```
   
-Check out the entire example script for message signing and verification [here](example.py).  
+Check out an example script for message signing and verification here- [example.py](example.py).  
