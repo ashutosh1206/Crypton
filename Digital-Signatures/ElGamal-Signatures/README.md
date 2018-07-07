@@ -12,7 +12,7 @@ For illustrative purposes, we will consider `Alice` as the signer and `Bob` as t
   
 There are different steps involved while signing or verifying data/signatures respectively with ElGamal, let's list them first and then study each of them in detail:  
 1. **Key Generation**: Alice generates a pair of public and private keys. Shares the public key `(g, y, p)`.
-2. **Signature Generation**: Alice uses her private key to generate the signature of the Hash of a message `m` with the help of another variable `r` (`r` is public). Shares signature `s`, `r`, and `m`.
+2. **Signature Generation**: Alice uses her private key to generate the signature of a message `m` with the help of another variable `r` (`r` is public). Shares signature `s`, `r`, and `m`.
 3. **Signature Verification**: Bob then uses Alice's public key to do computation on `s` and checks if it matches with `Hash(m)`, if yes then the signature is valid, otherwise it isn't.
   
   
@@ -20,9 +20,9 @@ There are different steps involved while signing or verifying data/signatures re
 ## Key Generation
 This step is done by the signer- Alice. Alice's Public and Private keys are generated using the following steps:  
 1. Selects a Cyclic Group `G` of order `p` and generator `g`
-2. Chooses a random integer `x` such that `1 < x < p-2`
+2. Chooses a random integer `x` such that `1 < x < p-2`. `x` is the private key.
 3. Calculates ![picture1](Pictures/picture1.gif)
-4. Shares `y`, `p`, `g`
+4. Shares `y`, `p`, `g` as public key
   
 
 Here is a python-2.7 implementation of the above step:  
@@ -41,12 +41,12 @@ def key_gen(bit_size):
 In this step, Alice does the following:  
 1. Selects a random integer `k` such that `1 < k < p-2` and `GCD(k, p-1) = 1`
 2. Calculates `r` as: ![picture2](Pictures/picture2.gif)
-3. Calculates hash of the message `m` to be signed as `H(m)`, where `H()` is the hashing algorithm agreed upon by both signer and verifier.
+3. Calculates hash of the message `m` to be signed as `H(m)`, where `H()` is a secure hashing algorithm agreed upon by both signer and verifier.
 4. Calculates signature `s` as ![picture8](Pictures/picture8.gif)
 4. Shares `r`, `s`, `m`
   
 
-Here is a python-2.7 implementation of the above step:  
+Here is a python-2.7 implementation of the above step: (Please note that the below example is only for illustrative purposes; md5 should not be used as a hash function)  
 ```python
 def sign(message, y, p, g):
 	h = hashlib.md5(message).hexdigest()
@@ -86,7 +86,7 @@ def verify(message, s, r, y, p, g):
 	except:
 		raise VerificationError("Invalid Signature!")
 ```
-Check out the complete trivial implementation/example of Signature Signing and Verification [here](example.py)
+Check out a trivial implementation/example of ElGamal Signature signing and verification here- [example.py](example.py)
   
   
 
