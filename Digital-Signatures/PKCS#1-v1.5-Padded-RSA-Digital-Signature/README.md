@@ -10,8 +10,10 @@ Digital signatures using PKCS#1_v1.5 Scheme in RSA protects the signature agains
 2. Vulnerabilities and Attacks
   
 
+## Signature Generation
 As we know that data is first hashed and then signed using the private key of the one who is signing it, to obtain the signature. This method is vulnerable to Blinding Attack. So PKCS#1 v1.5 Padding Scheme was introduced which also contains a method to sign messages that was resistant to Blinding Attack. The only difference between unpadded signatures and padded signatures is the string that is being exponentiated with `d` ie. in signing of unpadded messages, hash of the message is exponentiated with `d` whereas in case of signing of padded messages, a different string is exponentiated with `d`, as described below:  
-*Step-1*: We take the hash of the message `M` we want to sign, using a safe hashing algorithm agreed upon. Let it be called `HASH`  
+  
+*Step-1*: We take the hash of the message `M` we want to sign, using a secure hashing algorithm agreed upon by both signer and verifier. Let us call it `HASH`  
 *Step-2*: We obtain the string that is to be exponentiated with `d` as  
 ![picture1](https://i.imgur.com/naO58n4.gif),  
 where the number of `FF` bytes are such that the resultant padded string becomes of around the same size as the modulus `N` and ASN.1 is an encoding signifying the hash algorithm being used, hence specifying size of `HASH` following it. Following is the ASN.1 encoding of various hashing algorithms:  
@@ -121,6 +123,6 @@ def verifier(key, signature, message):
 	print "Signature Verified!"
 ```
   
-Verification functions like the one implemented above are vulnerable to e = 3 Bleichenbacher's Signature Forgery, we will discuss the attack separately. The vulnerability lies in the fact that the verification function does not check if the padding bytes between `\x00\x01` and `\x00` + `ASN.1` is really `FF` or not, it simply unpads it without checking.  
+Verification functions like the one implemented above are vulnerable to [e = 3 Bleichenbacher's Signature Forgery](../Attack-e=3-Bleichenbacher/), we will discuss the attack separately. The vulnerability lies in the fact that the verification function does not check if the padding bytes between `\x00\x01` and `\x00` + `ASN.1` is really `FF` or not, it simply unpads it without checking.  
   
-Check out the entire example of signing and verifying messages padded with PKCS#1 v1.5 [here](example.py).  
+Check out the entire example of signing and verifying messages padded with PKCS#1 v1.5 here- [example.py](example.py).  
