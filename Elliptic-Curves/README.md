@@ -66,7 +66,7 @@ Now that we have defined point addition geometrically, let us formulate the same
      + ![picture](Pictures/17.gif)
 
 Now that we have calculated (x, y) coordinates of C', we can write coordinates of C as:  
-> ![picture](Pictures/18.gif)
+> ![picture](Pictures/18.gif)  
 > Notice that we added (mod p) in calculation as our curve is defined over the Finite Field ![picture](Pictures/1.gif) and not over Real Numbers
   
 
@@ -74,3 +74,38 @@ Let us implement point addition on python-2.7:
 ```python
 
 ```
+  
+  
+## Point Doubling
+Point Doubling is similar to Point Addition, just that the formula for calculating slope is different, rest of the formulae for getting the coordinates of x<sub>3</sub> and y<sub>3</sub> are the same. We will first define point doubling geometrically and then define it arithmetically. Please note here `doubling` is just a notation, the operation that takes place on point lying on the curve is very different from normal doubling.  
+  
+Consider a point P=(x<sub>3</sub>, y<sub>3</sub>) that we want to `double`. We can calculate 2P with the help of following steps:
+> 1. Draw a tangent on the curve through P and obtain a second point of interesection between the curve and the line. 
+> 2. Reflect the point obtained along the x-axis and on the curve. This mirrored point is 2P.
+  
+
+![picture](https://i.imgur.com/jd3LBjO.jpg)  
+  
+
+We can also understand it using Point Addition: Consider addition two points P and Q on an Elliptic Curve, as Q approaches P, the line joining the two points to `add` these points approaches closer and as Q becomes very very close to P, the line becomes a tangent at point P.  
+  
+Arithmetically, we can express coordinates of 2P as:  
+> ![picture](Pictures/19.gif)  
+> Here m is the slope of the tangent passing through P
+  
+
+Let us implement point doubling on python-2.7:
+```python
+
+```
+  
+## Resources
+There are some pretty cool resources on ECC which you can refer:  
+1. [Nick Sullivan's blog post on Elliptic Curves](https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/)
+2. [Introduction to Cryptography by Christof Paar- Introduction to Elliptic Curves](https://www.youtube.com/watch?v=vnpZXJL6QCQ)
+3. [Introduction to Cryptography by Christof Paar- Elliptic Curve Cryptography](https://www.youtube.com/watch?v=zTt4gvuQ6sY)
+  
+  
+
+## References
+1. Picture/GIF reference: https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/
