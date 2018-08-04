@@ -125,55 +125,55 @@ The service returns concatenation of ciphertext `C` and corresponding authentica
 Here is a trivial implementation of Authentication part of AES-GCM:
 ```python
 def mod_polynomial_mult(self, a, b, p):
-		"""
-		Multiplication of polynomials a.b modulo an irreducible polynomial p over GF(2**128)
-		Assertion: a, b must already belong to the Galois Field GF(2**128)
-		"""
-		assert len(bin(a)[2:]) <= 128
-		assert len(bin(b)[2:]) <= 128
-		result = 0
-		for i in bin(b)[2:]:
-			result = result << 1
-			if int(i):
-				result = result ^ a
-			if result >> 128:
-				result = result ^ p
-		return result
+        """
+        Multiplication of polynomials a.b modulo an irreducible polynomial p over GF(2**128)
+        Assertion: a, b must already belong to the Galois Field GF(2**128)
+        """
+        assert len(bin(a)[2:]) <= 128
+        assert len(bin(b)[2:]) <= 128
+        result = 0
+        for i in bin(b)[2:]:
+                result = result << 1
+                if int(i):
+                        result = result ^ a
+                if result >> 128:
+                        result = result ^ p
+        return result
 
-	def authtag_gen(self, ciphertext1):
-		"""
-		Generating auth-tag using ciphertext and associated data 
-		"""
-		ciphertext = [str2int(ciphertext1[i:i+16]) for i in range(0, len(ciphertext1), 16)]
-		associated_data = [str2int(self.associated_data[i:i+16]) for i in range(0, len(self.associated_data), 16)]
+def authtag_gen(self, ciphertext1):
+        """
+        Generating auth-tag using ciphertext and associated data 
+        """
+        ciphertext = [str2int(ciphertext1[i:i+16]) for i in range(0, len(ciphertext1), 16)]
+        associated_data = [str2int(self.associated_data[i:i+16]) for i in range(0, len(self.associated_data), 16)]
 
-		obj1 = AES.new(self.key, AES.MODE_ECB)
+        obj1 = AES.new(self.key, AES.MODE_ECB)
 
-		# Step-1: Secret String Generation
-		H = str2int(obj1.encrypt("\x00"*16))
-		X = 0
-		p = (1<<128) + (1<<7) + (1<<2) + (1<<1) + 1
-		
-		# Step-2: Modular Polynomial Multiplication of Associated Data blocks with H
-		for i in range(len(associated_data)):
-			X = self.mod_polynomial_mult(X, associated_data[i], p)
+        # Step-1: Secret String Generation
+        H = str2int(obj1.encrypt("\x00"*16))
+        X = 0
+        p = (1<<128) + (1<<7) + (1<<2) + (1<<1) + 1
+        
+        # Step-2: Modular Polynomial Multiplication of Associated Data blocks with H
+        for i in range(len(associated_data)):
+                X = self.mod_polynomial_mult(X, associated_data[i], p)
 
-		# Step-3: Modular Polynomial Multiplication of Ciphertext blocks with H
-		for i in range(len(ciphertext)):
-			X = self.mod_polynomial_mult(X, ciphertext[i], p)
+        # Step-3: Modular Polynomial Multiplication of Ciphertext blocks with H
+        for i in range(len(ciphertext)):
+                X = self.mod_polynomial_mult(X, ciphertext[i], p)
 
-		# Step-4: Modular Polynomial Multiplication of H with (bit length of A concatenated with bit length of C)
-		la = bin(len(self.associated_data))[2:].zfill(64)
-		lc = bin(len(ciphertext1))[2:].zfill(64)
-		res = int(la + lc, 2)
-		S = self.mod_polynomial_mult(X, res, p)
+        # Step-4: Modular Polynomial Multiplication of H with (bit length of A concatenated with bit length of C)
+        la = bin(len(self.associated_data))[2:].zfill(64)
+        lc = bin(len(ciphertext1))[2:].zfill(64)
+        res = int(la + lc, 2)
+        S = self.mod_polynomial_mult(X, res, p)
 
-		# Step-5: XORing S with E(J0) ie. XORing S obtained above with ciphertext of (iv || ctr)
-		obj1 = AES.new(self.key, AES.MODE_ECB)
-		construct_nctr = bin2str(str2bin(self.nonce) + "0"*32)
-		T = S ^ str2int(obj1.encrypt(construct_nctr))
+        # Step-5: XORing S with E(J0) ie. XORing S obtained above with ciphertext of (iv || ctr)
+        obj1 = AES.new(self.key, AES.MODE_ECB)
+        construct_nctr = bin2str(str2bin(self.nonce) + "0"*32)
+        T = S ^ str2int(obj1.encrypt(construct_nctr))
 
-		return int2str(T)
+        return int2str(T)
 
 ```
 
