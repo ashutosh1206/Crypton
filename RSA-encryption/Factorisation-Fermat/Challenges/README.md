@@ -1,4 +1,6 @@
 # Challenges
 
-1. QProximity: SEC-T CTF 2017
-2. Crafted-RSA: InCTF 2017
+| S.No. | Challenge                                                            | CTF                      | Year | Difficulty Level | Points |
+|-------|:--------------------------------------------------------------------:|:------------------------:|:----:|:----------------:|:------:|
+| 1     | [QProximity](qproximity/)                                            | SEC-T CTF                | 2017 | _None_           | 200    |
+| 2     | [Crafted-RSA](Crafted-RSA/)                                          | InCTF                    | 2017 | _None_           | 150    |
