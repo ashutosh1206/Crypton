@@ -15,7 +15,7 @@ There are different sections in this README:
 
 ---
 ## Motivation
-Help CTF players and individuals interested in the field of Cryptography provide a platform for learning attacks in crypto and =for experienced CTF players to practice challenges systematically divided into attacks associated with different sub-domains in crypto. Also, illustrate through various attack explanations how proper implementation of protocols is crucial.
+Help CTF players and individuals interested in the field of Cryptography provide a platform for learning attacks in crypto and for experienced CTF players to practice challenges systematically divided into attacks associated with different sub-domains in crypto. Also, illustrate through various attack explanations how proper implementation of protocols is crucial.
   
   
 
@@ -127,3 +127,15 @@ Help CTF players and individuals interested in the field of Cryptography provide
 | 6     | [e=3 Bleichenbacher's Attack](https://github.com/ashutosh1206/Crypton/tree/master/Digital-Signatures/Attack-e%3D3-Bleichenbacher)| <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/Digital-Signatures/Attack-e%3D3-Bleichenbacher/README.md)</li></ul> | <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Matasano-Crypto-Challenges/tree/master/set6/p42)</li></ul>| <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/tree/master/Digital-Signatures/Attack-e%3D3-Bleichenbacher/Challenges)</li></ul> |
   
   
+## TODO
+1. RSA Encryption
+   + Chosen Ciphertext Attack on RSA Cryptosystem- Byte by Byte decryption
+   + Padding Oracle Attack on PKCS1 padded RSA encryption systemat
+   + Fermat's Factorisation
+     + Sieve Improvement
+   + Coppersmith's Attack
+     + Boneh Durfee Attack
+   + Hastad's Broadcast Attack
+     + Implementation of HBA on padded messages
+   + PKCS1-v1.5 Padded RSA encryption
+2. [More to be added]
