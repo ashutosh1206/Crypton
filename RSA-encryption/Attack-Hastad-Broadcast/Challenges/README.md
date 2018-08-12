@@ -1,7 +1,6 @@
 # Challenges
+  
 
-## Hastad's Broadcast Attack on unpadded messages
-
-
-## Hastad's Broadcast Attack on padded messages
-1. Multicast - Plaid CTF 2017
+| S.No. | Challenge                                                            | CTF                      | Year | Difficulty Level | Points |
+|-------|:--------------------------------------------------------------------:|:------------------------:|:----:|:----------------:|:------:|
+| 1     | [Multicast](Multicast/)                                              | Plaid                    | 2017 | _None_           | 175    |
