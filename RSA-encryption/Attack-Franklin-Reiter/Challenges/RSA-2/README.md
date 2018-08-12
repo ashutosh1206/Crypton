@@ -1,7 +1,4 @@
 # RSA-2
   
-**Description**: Go do some math
-
-**Challenge points**: 150
-
-**Writeup**: 
+1. Challenge Description: Go do some math
+2. Challenge writeup: 
