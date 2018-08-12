@@ -7,7 +7,7 @@ Prerequisites:
 Let the modulus be `N` and its factors be `p` and `q`. The factorisation technique described here **works only when p-1 and q-1 have very small prime factors**.  
   
 ## The idea
-We can write from Fermat's Theorem:
+We can write from Fermat's Little Theorem:
 ![equation](Pictures/1.gif), where `p` is a prime and `a` is any positive integer.  
 Thus, we can write for any positive integer `k` that,  
 ![equation](Pictures/2.gif)  
