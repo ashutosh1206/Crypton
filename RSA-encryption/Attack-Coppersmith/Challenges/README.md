@@ -1,3 +1,6 @@
 # Challenges
+  
 
-1. Stereotypes- Backdoor 2017
+| S.No. | Challenge                                                            | CTF                      | Year | Difficulty Level | Points |
+|-------|:--------------------------------------------------------------------:|:------------------------:|:----:|:----------------:|:------:|
+| 1     | [Stereotypes](stereotypes/)                                          | Backdoor                 | 2017 | _None_           |        |
