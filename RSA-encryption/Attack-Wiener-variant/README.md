@@ -7,7 +7,7 @@ Prerequisites:
 As we know that Wiener's Attack works in case where d < N<sup>1/4</sup>. This attack works in the scenario when d is a few bits greater than N<sup>1/4</sup>.  
   
 ## The Attack
-The attack says that in case `d` is a few bits greater than N<sup>1/4</sup> candidates for private key exponent are of the form ![equation](https://latex.codecogs.com/png.latex?rq_{m&plus;1}&space;&plus;&space;sq_{m}), where ![equation](https://latex.codecogs.com/png.latex?q_{m&plus;1}) and ![equation](https://latex.codecogs.com/png.latex?q_{m}) is `(m+1)`th and `(m)`th convergent of continued fraction of `e/n`. We can apply this to our exploit as follows:
+The attack says that in case `d` is a few bits greater than N<sup>1/4</sup> candidates for private key exponent are of the form ![equation](Pictures/1.gif), where ![equation](Pictures/2.gif) and ![equation](Pictures/3.gif) is `(m+1)`th and `(m)`th convergent of continued fraction of `e/n`. We can apply this to our exploit as follows:
 ```python
 def wiener(e, n):
 	m = 12345

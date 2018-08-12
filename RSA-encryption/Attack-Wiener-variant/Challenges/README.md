@@ -1,3 +1,5 @@
 # Challenges
 
-1. Gracias - ASIS CTF Finals 2017
+| S.No. | Challenge                                                            | CTF                      | Year | Difficulty Level | Points |
+|-------|:--------------------------------------------------------------------:|:------------------------:|:----:|:----------------:|:------:|
+| 1     | [Gracias](Gracias/)                                                  | ASIS Finals              | 2017 | _None_           |  287   |
