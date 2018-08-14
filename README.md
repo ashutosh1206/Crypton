@@ -3,7 +3,11 @@
 
 Crypton is an educational library to **learn** and **practice** Offensive and Defensive Cryptography. It is basically a collection of explanation and implementation of all the existing vulnerabilities and attacks on various Encryption Systems (Symmetric and Asymmetric), Digital Signatures, Message Authentication Codes and Authenticated Encryption Systems. Each attack is also supplemented with example challenges from "Capture The Flag" contests and their respective write-ups. Individuals who are already acquainted (or are into CTFs) with this field can use Crypton as a tool to solve challenges based on a particular existing vulnerability.  
   
-The library will be continuously updated with attack explanations and CTF challenges!
+The library will be continuously updated with attack explanations and CTF challenges! Feel free to [email me](https://github.com/ashutosh1206/Crypton#author) regarding any suggestions!
+  
+I have written a blog post on the timeline of development of this library: [https://masterpessimistaa.wordpress.com/2018/08/12/announcing-crypton-an-educational-library-to-learn-offensive-and-defensive-cryptography/](https://masterpessimistaa.wordpress.com/2018/08/12/announcing-crypton-an-educational-library-to-learn-offensive-and-defensive-cryptography/)  
+  
+**WARNING**: The author in no way guarantees that the code is secure. The library is only meant for educational purposes and the code should not be used for implementing in real world. All the example scripts in the library are *trivial* implementations.  
   
 There are different sections in this README:  
 * _Motivation_- What motivated me to create this library
@@ -139,3 +143,13 @@ Help CTF players and individuals interested in the field of Cryptography provide
      + Implementation of HBA on padded messages
    + PKCS1-v1.5 Padded RSA encryption
 2. [More to be added]
+  
+  
+
+## Author
+Ashutosh Ahelleya
++ Twitter: [https://twitter.com/ashutosha_](https://twitter.com/ashutosha_)
++ Blog: [https://masterpessimistaa.wordpress.com](https://masterpessimistaa.wordpress.com)
++ EmailID: [ashutosh.ahelleya@gmail.com](ashutosh.ahelleya@gmail.com)
+
+
