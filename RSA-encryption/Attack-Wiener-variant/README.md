@@ -29,7 +29,7 @@ def wiener(e, n):
 		q0 = q1
         return None
 ```
-The exploit script [here](exploit.py).
+The exploit script [here](exploit.py). You can also read this paper [here](https://www.math.tugraz.at/~cecc08/abstracts/cecc08_abstract_20.pdf) that discusses variant of Wiener's Attack in detail.
   
   
 ## References
