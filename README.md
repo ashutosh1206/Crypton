@@ -133,16 +133,24 @@ Help CTF players and individuals interested in the field of Cryptography provide
   
 ## TODO
 1. RSA Encryption
-   + Chosen Ciphertext Attack on RSA Cryptosystem- Byte by Byte decryption
-   + Padding Oracle Attack on PKCS1 padded RSA encryption systemat
+   + PKCS1-v1.5 Padded RSA encryption
+   + Chosen Ciphertext Attack on RSA Cryptosystem- LSB Decryption Oracle
+   + Padding Oracle Attack on PKCS1 padded RSA encryption system
    + Fermat's Factorisation
      + Sieve Improvement
    + Coppersmith's Attack
      + Boneh Durfee Attack
    + Hastad's Broadcast Attack
      + Implementation of HBA on padded messages
-   + PKCS1-v1.5 Padded RSA encryption
-2. [More to be added]
+2. Pseudo-Random-Number-Generators
+   + Linear Congruential Generator
+   + Mersenne Twister PRNG
+   + Linear Feedback Shift Register
+3. Digital Signatures
+   + Blinding Attack on RSA Digital Signatures
+4. Diffie Hellman Key Exchange
+   + Elliptic Curve Diffie Hellman
+5. [More to be added]
   
   
 
