@@ -1,40 +1,40 @@
 # Crypton
-  
+
 
 Crypton is an educational library to **learn** and **practice** Offensive and Defensive Cryptography. It is basically a collection of explanation and implementation of all the existing vulnerabilities and attacks on various Encryption Systems (Symmetric and Asymmetric), Digital Signatures, Message Authentication Codes and Authenticated Encryption Systems. Each attack is also supplemented with example challenges from "Capture The Flag" contests and their respective write-ups. Individuals who are already acquainted (or are into CTFs) with this field can use Crypton as a tool to solve challenges based on a particular existing vulnerability.  
-  
+
 The library will be continuously updated with attack explanations and CTF challenges! Feel free to [email me](https://github.com/ashutosh1206/Crypton#author) regarding any suggestions!
-  
+
 I have written a blog post on the timeline of development of this library: [https://masterpessimistaa.wordpress.com/2018/08/12/announcing-crypton-an-educational-library-to-learn-offensive-and-defensive-cryptography/](https://masterpessimistaa.wordpress.com/2018/08/12/announcing-crypton-an-educational-library-to-learn-offensive-and-defensive-cryptography/)  
-  
+
 **WARNING**: The author in no way guarantees that the code is secure. The library is only meant for educational purposes and the code should not be used for implementing in real world. All the example scripts in the library are *trivial* implementations.  
-  
+
 There are different sections in this README:  
 * _Motivation_- What motivated me to create this library
 * _Library Structure_- Directory structure of Crypton
 * _Domain Coverage_- What all cryptosystems and attacks are covered in this library
 * _Future Plans/TODO_- Attacks/concepts that are to be included soon
-  
-  
+
+
 
 ---
 ## Motivation
 Help CTF players and individuals interested in the field of Cryptography provide a platform for learning attacks in crypto and for experienced CTF players to practice challenges systematically divided into attacks associated with different sub-domains in crypto. Also, illustrate through various attack explanations how proper implementation of protocols is crucial.
-  
-  
+
+
 
 ---
 ## Library Structure
-  
-  
+
+
 
 ![picture](Pictures/1.png)  
-  
-  
+
+
 ---
 
 ## Domain Coverage
-  
+
 ### 1. Block Ciphers
 
 | S.No. | Topic                       | Explanation                                                                                     | Impl./Exploit | Challenge# |
@@ -49,8 +49,8 @@ Help CTF players and individuals interested in the field of Cryptography provide
 | 8     | [CBC Byte at a Time](https://github.com/ashutosh1206/Crypton/tree/master/Block-Cipher/Attack-CBC-Byte-at-a-Time)- byte at a time decryption of a `secret` string running on a remote service encrypting `input`+`secret` in ECB mode| <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/Block-Cipher/Attack-CBC-Byte-at-a-Time/README.md) </li></ul>| <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/Block-Cipher/Attack-CBC-Byte-at-a-Time/exploit.py) </li></ul> |  <ul><li>- [ ] </li></ul> |
 | 9     | [CBC Padding Oracle Attack](https://github.com/ashutosh1206/Crypton/tree/master/Block-Cipher/Attack-CBC-Padding-Oracle)- decryption of data encrypted by a vulnerable service providing encryption/decryption | <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/Block-Cipher/Attack-CBC-Padding-Oracle/README.md) </li></ul>|  <ul><li>- [ ] </li></ul> |  <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/tree/master/Block-Cipher/Attack-CBC-Padding-Oracle/Challenges) </li></ul> |
 | 10    | [CTR Bit Flipping](https://github.com/ashutosh1206/Crypton/tree/master/Block-Cipher/Attack-CTR-Bit-Flipping)- exploiting cookie generation mechanism to login as admin when cookie is generated using a block cipher in CBC mode| <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/Block-Cipher/Attack-CTR-Bit-Flipping/README.md) </li></ul>|  <ul><li>- [ ] </li></ul> |  <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/tree/master/Block-Cipher/Attack-CTR-Bit-Flipping/Challenges) </li></ul> |
-  
-  
+
+
 
 ### 2. RSA Encryption
 
@@ -68,9 +68,10 @@ Help CTF players and individuals interested in the field of Cryptography provide
 | 10    | [Franklin Reiter Related Message Attack](https://github.com/ashutosh1206/Crypton/tree/master/RSA-encryption/Attack-Franklin-Reiter)- attack to retrieve related messages encrypted using the same modulus| <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/RSA-encryption/Attack-Franklin-Reiter/README.md)</li></ul> | <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/RSA-encryption/Attack-Franklin-Reiter/exploit.sage) </li></ul>| <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/tree/master/RSA-encryption/Attack-Franklin-Reiter/Challenges) </li></ul> |
 | 11    | [Hastad's Broadcast Attack- with extension](https://github.com/ashutosh1206/Crypton/tree/master/RSA-encryption/Attack-Hastad-Broadcast)- attack to retrieve a message broadcasted among different people, encrypted using same exponent but different moduli| <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/RSA-encryption/Attack-Hastad-Broadcast/README.md)</li></ul> | <ul><li>- [x] [\[link\]- script needs to be fixed](https://github.com/ashutosh1206/Crypton/blob/master/RSA-encryption/Attack-Hastad-Broadcast/exploit.py) </li></ul>| <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/tree/master/RSA-encryption/Attack-Hastad-Broadcast/Challenges) </li></ul> |
 | 12    | [PKCS1-v1.5-Padded-RSA-Encryption/Decryption](https://github.com/ashutosh1206/Crypton/tree/master/RSA-encryption/PKCS1-v1.5-Padded-RSA)- ASN1 encoding, padded RSA encryption (needs to be fixed)| <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul>| <ul><li>- [ ] </li></ul> |
-| 13    | [Intro-RSA-Challenges](https://github.com/ashutosh1206/Crypton/tree/master/RSA-encryption/Intro-Challenges)- basic challenges in RSA related to Number Theory| <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/RSA-encryption/Intro-Challenges/README.md)</li></ul> | <ul><li>- [ ] </li></ul>| <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/tree/master/RSA-encryption/Intro-Challenges) </li></ul> |
-  
-  
+| 13    | [Least Significant Bit Oracle Attack](https://github.com/ashutosh1206/Crypton/tree/master/RSA-encryption/Attack-LSBit-Oracle)- attack on RSA oracle leaking least significant bit value on decryption | <ul><li>-[x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/RSA-encryption/Attack-LSBit-Oracle/README.md)</li></ul>| <ul><li>-[x] [\[link\]](RSA-encryption/Attack-LSBit-Oracle/lsbitoracle.py) </li></ul>| <ul><li>- [ ] </li></ul>
+| 14    | [Intro-RSA-Challenges](https://github.com/ashutosh1206/Crypton/tree/master/RSA-encryption/Intro-Challenges)- basic challenges in RSA related to Number Theory| <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/RSA-encryption/Intro-Challenges/README.md)</li></ul> | <ul><li>- [ ] </li></ul>| <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/tree/master/RSA-encryption/Intro-Challenges) </li></ul> |
+
+
 
 ### 3. Message Authentication Codes (MACs)
 
@@ -79,24 +80,24 @@ Help CTF players and individuals interested in the field of Cryptography provide
 | 1     | [Message Authentication Code](https://github.com/ashutosh1206/Crypton/tree/master/Message-Authentication-Code)- internals and security analysis of MACs| <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/Message-Authentication-Code/README.md)</li></ul> | <ul><li>- [ ] </li></ul>| <ul><li>- [ ] </li></ul> |
 | 2     | [CBC MAC Forgery](https://github.com/ashutosh1206/Crypton/tree/master/Message-Authentication-Code/CBC-MAC-Forgery)- generating two message `M1` and `M2` having the same CBC-MAC authentication tag| <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/Message-Authentication-Code/CBC-MAC-Forgery/README.md)</li></ul> | <ul><li>- [ ] </li></ul>| <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/tree/master/Message-Authentication-Code/CBC-MAC-Forgery/Challenges) </li></ul> |
 | 3     | [Length Extension Attack on CBC-MAC](https://github.com/ashutosh1206/Crypton/tree/master/Message-Authentication-Code/Attack-Length-Extension-CBC-MAC)- generate a valid authentication tag of message M1 \|\| M2 (concatenation) given MAC(M1) | <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/Message-Authentication-Code/Attack-Length-Extension-CBC-MAC/README.md)</li></ul> | <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/Message-Authentication-Code/Attack-Length-Extension-CBC-MAC/CBC-Length-Extension.py) </li></ul>| <ul><li>- [ ] </li></ul> |
-  
-  
+
+
 ### 4. Discrete Logarithm Problem
 
 | S.No. | Topic                       | Explanation                                                                                     | Impl./Exploit | Challenge# |
 |-------|:---------------------------:|:-----------------------------------------------------------------------------------------------:|:------------:|:----------:|
 | 1     | [DLP](https://github.com/ashutosh1206/Crypton/tree/master/Discrete-Logarithm-Problem)- cyclic groups, discrete logarithm problem, Baby-Step-Giant-Step algorithm| <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/Discrete-Logarithm-Problem/README.md)</li></ul> | <ul><li>- [ ] </li></ul>| <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/tree/master/Discrete-Logarithm-Problem/Challenges) </li></ul> |
 | 2     | [Elliptic Curve DLP](https://github.com/ashutosh1206/Crypton/tree/master/Discrete-Logarithm-Problem/Elliptic-Curve-DLP)- defining identity element, inverse of a point, cyclic groups over points on an EC, Hasse's theorem, ECDLP | <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/Discrete-Logarithm-Problem/Elliptic-Curve-DLP/README.md)</li></ul> | <ul><li>- [ ] </li></ul>| <ul><li>- [ ] </li></ul> |
-  
-  
+
+
 
 ### 5. ElGamal Encryption
 
 | S.No. | Topic                       | Explanation                                                                                     | Impl./Exploit | Challenge# |
 |-------|:---------------------------:|:-----------------------------------------------------------------------------------------------:|:------------:|:----------:|
 | 1     | [ElGamal Cryptosystem- Encryption/Decryption](https://github.com/ashutosh1206/Crypton/tree/master/Elgamal-Encryption)- key generation, encryption, decryption in ElGamal Cryptosystem| <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/Elgamal-Encryption/README.md)</li></ul> | <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/Elgamal-Encryption/example.py) </li></ul>| <ul><li>- [x]  [\[link\]](https://github.com/ashutosh1206/Crypton/tree/master/Elgamal-Encryption/Challenges)</li></ul> |
-  
-  
+
+
 
 ### 6. Authenticated Encryption (AE)
 
@@ -108,16 +109,16 @@ Help CTF players and individuals interested in the field of Cryptography provide
 | 4     | [AE with Associated Data](https://github.com/ashutosh1206/Crypton/tree/master/Authenticated-Encryption#authenticated-encryption-with-associated-data-aead)| <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/tree/master/Authenticated-Encryption#authenticated-encryption-with-associated-data-aead)</li></ul> | <ul><li>- [ ] </li></ul>| <ul><li>- [ ] </li></ul> |
 | 5     | [AES-GCM](https://github.com/ashutosh1206/Crypton/tree/master/Authenticated-Encryption/AES-GCM)- encryption in AES-GCM, Wegman-Carter MAC| <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/Authenticated-Encryption/AES-GCM/README.md)</li></ul> | <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/Authenticated-Encryption/AES-GCM/AES-GCM-implementation.py) </li></ul>| <ul><li>- [ ] </li></ul> |
 | 6     | [Forbidden Attack on AES-GCM](https://github.com/ashutosh1206/Crypton/tree/master/Authenticated-Encryption/AES-GCM/Attack-Forbidden)- attack on AES-GCM due to nonce-reuse| <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/Authenticated-Encryption/AES-GCM/Attack-Forbidden/README.md)</li></ul> | <ul><li>- [ ] </li></ul>| <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/tree/master/Authenticated-Encryption/AES-GCM/Attack-Forbidden/Challenges) </li></ul> |
-  
-  
+
+
 
 ### 7. Elliptic Curves
 
 | S.No. | Topic                       | Explanation                                                                                     | Impl./Exploit | Challenge# |
 |-------|:---------------------------:|:-----------------------------------------------------------------------------------------------:|:------------:|:----------:|
 | 1     | [Elliptic Curve Internals](https://github.com/ashutosh1206/Crypton/tree/master/Elliptic-Curves)- defining Elliptic Curves, point addition, point doubling and scalar multiplication | <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/Elliptic-Curves/README.md)</li></ul> | <ul><li>- [ ] </li></ul>| <ul><li>- [ ] </li></ul> |
-  
-  
+
+
 
 ### 8. Digital Signatures
 
@@ -129,12 +130,12 @@ Help CTF players and individuals interested in the field of Cryptography provide
 | 4     | [Unpadded RSA Digital Signatures](https://github.com/ashutosh1206/Crypton/tree/master/Digital-Signatures/Unpadded-RSA-Digital-Signatures)- signature generation and verification in RSA digital signature scheme| <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/Digital-Signatures/Unpadded-RSA-Digital-Signatures/README.md)</li></ul> | <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/Digital-Signatures/Unpadded-RSA-Digital-Signatures/example.py)</li></ul>| <ul><li>- [ ] </li></ul> |
 | 5     | [PKCS1-v1.5 padded RSA Digital Signatures](https://github.com/ashutosh1206/Crypton/tree/master/Digital-Signatures/PKCS%231-v1.5-Padded-RSA-Digital-Signature)| <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/Digital-Signatures/PKCS%231-v1.5-Padded-RSA-Digital-Signature/README.md)</li></ul> | <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/Digital-Signatures/PKCS%231-v1.5-Padded-RSA-Digital-Signature/example.py)</li></ul>| <ul><li>- [ ] </li></ul> |
 | 6     | [e=3 Bleichenbacher's Attack](https://github.com/ashutosh1206/Crypton/tree/master/Digital-Signatures/Attack-e%3D3-Bleichenbacher)| <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/Digital-Signatures/Attack-e%3D3-Bleichenbacher/README.md)</li></ul> | <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Matasano-Crypto-Challenges/tree/master/set6/p42)</li></ul>| <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/tree/master/Digital-Signatures/Attack-e%3D3-Bleichenbacher/Challenges)</li></ul> |
-  
-  
+
+
 ## TODO
 1. RSA Encryption
    + PKCS1-v1.5 Padded RSA encryption
-   + Chosen Ciphertext Attack on RSA Cryptosystem- LSB Decryption Oracle
+   + ~~Chosen Ciphertext Attack on RSA Cryptosystem- LSB Decryption Oracle~~ [\[Done\]](https://github.com/ashutosh1206/Crypton/tree/master/RSA-encryption/Attack-LSBit-Oracle)
    + Padding Oracle Attack on PKCS1 padded RSA encryption system
    + Fermat's Factorisation
      + Sieve Improvement
@@ -151,13 +152,11 @@ Help CTF players and individuals interested in the field of Cryptography provide
 4. Diffie Hellman Key Exchange
    + Elliptic Curve Diffie Hellman
 5. [More to be added]
-  
-  
+
+
 
 ## Author
 Ashutosh Ahelleya
 + Twitter: [https://twitter.com/ashutosha_](https://twitter.com/ashutosha_)
 + Blog: [https://masterpessimistaa.wordpress.com](https://masterpessimistaa.wordpress.com)
 + EmailID: [ashutosh.ahelleya@gmail.com](ashutosh.ahelleya@gmail.com)
-
-
