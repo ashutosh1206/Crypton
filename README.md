@@ -117,7 +117,7 @@ Help CTF players and individuals interested in the field of Cryptography provide
 
 | S.No. | Topic                       | Explanation                                                                                     | Impl./Exploit | Challenge# |
 |-------|:---------------------------:|:-----------------------------------------------------------------------------------------------:|:------------:|:----------:|
-| 1     | [Elliptic Curve Internals](https://github.com/ashutosh1206/Crypton/tree/master/Elliptic-Curves)- defining Elliptic Curves, point addition, point doubling and scalar multiplication | <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/Elliptic-Curves/README.md)</li></ul> | <ul><li>- [ ] </li></ul>| <ul><li>- [ ] </li></ul> |
+| 1     | [Elliptic Curve Internals](https://github.com/ashutosh1206/Crypton/tree/master/Elliptic-Curves)- defining Elliptic Curves, point addition, point doubling and scalar multiplication | <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/Elliptic-Curves/README.md)</li></ul> | <ul><li>- [x] [\[python impl.\]](https://github.com/ashutosh1206/Crypton/blob/master/Elliptic-Curves/ellipticcurve.py), [\[sage impl.\]](https://github.com/ashutosh1206/Crypton/blob/master/Elliptic-Curves/ellipticcurve.sage)</li></ul> | <ul><li>- [ ] </li></ul> |
 
 
 
