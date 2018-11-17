@@ -21,13 +21,13 @@ Suppose we want to login as "admin=true" but the server flips `=` to `?` before 
 
 ![decryption](https://upload.wikimedia.org/wikipedia/commons/3/3c/CTR_decryption_2.svg)
 
-We can easily notice that the ciphertext of the respective block is xored with decryption of `nonce+counter` to give plaintext of the respective block. This can be written for each block as (C is the ciphertext block, P is the plaintext block and D() is the decryption oracle:
+We can easily notice that the ciphertext of the respective block is xored with encryption of `nonce+counter` to give plaintext of the respective block. This can be written for each block as (C is the ciphertext block, P is the plaintext block and D() is the decryption oracle:
 ```
-    C = D(nonce + counter) xor P
+    C = E(nonce + counter) xor P
     For the nth byte of the block we can write:
-    C[n] = D(nonce + counter)[n] xor P[n]
-    D(nonce + counter)[n] = C[n] xor P[n]    ----> This is constant even if we flip/change some characters of C, look at the decryption oracle again
-    D(nonce + counter)[n] = C[n] xor PF[n]   ----> PF because we want it to be a fixed plaintext block (reason above) 
+    C[n] = E(nonce + counter)[n] xor P[n]
+    E(nonce + counter)[n] = C[n] xor P[n]    ----> This is constant even if we flip/change some characters of C, look at the decryption oracle again
+    E(nonce + counter)[n] = C[n] xor PF[n]   ----> PF because we want it to be a fixed plaintext block (reason above) 
     Therefore we can write,
     C[n] = C[n] xor PF[n] xor PD[n]    ----> PD is the value of plaintext desired
 ```
