@@ -48,7 +48,6 @@ if __name__ == "__main__":
         option = int(raw_input("Enter your choice: "))
         if option == 1:
             try:
-                print "Coming here"
                 message = raw_input("Enter the message you want to encrypt (in hex): ").decode("hex")
             except:
                 print "Enter proper hex chars"

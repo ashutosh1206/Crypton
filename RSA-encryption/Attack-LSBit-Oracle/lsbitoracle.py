@@ -8,15 +8,21 @@ def lsbitoracle(flag_enc, _decrypt, e, N, upper_limit, lower_limit):
 
     Function implementing LSBit Oracle Attack
 
-    Warning: Function does not return the last byte of the final plaintext
+    *Warning*: Function does not return the last byte of the final plaintext
 
-    :Input parameters:
-    flag_enc   : <type 'str'>     : Ciphertext you want to decrypt
-    _decrypt   : <type 'function'>: Function interacting with the server for decryption
-    e          : <type 'int' or 'long'>     : Public key exponent
-    N          : <type 'long'>    : Modulus
-    upper_limit: <type 'long'>    : Maximum value of corresponding plaintext of flag_enc
-    lower_limit: <type 'long'>    : Minimum value of corresponding plaintext of flag_enc
+    :parameters:
+        flag_enc   : str
+                    Ciphertext you want to decrypt
+        _decrypt   : function
+                    Function interacting with the server for decryption
+        e          : int/long
+                    Public Key exponent
+        N          : long
+                    Public Key Modulus
+        upper_limit: long
+                    Maximum value of corresponding plaintext of flag_enc
+        lower_limit: long
+                    Minimum value of corresponding plaintext of flag_enc
 
     Since the attack messes up with the last byte of the plaintext, lsbitoracle
     function returns only flag[:-1]. It returns -1 in case of any Exception
