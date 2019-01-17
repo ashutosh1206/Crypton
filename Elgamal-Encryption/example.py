@@ -44,7 +44,7 @@ def _generate_key():
 	# Assigning the largest 1024-bit safe prime as p
 	p = (1 << 1024) - 1093337
 	x = randint(2, p-2)
-	g = 23
+	g = 7
 	q = p - 1
 	h = pow(g, x, p)
 	pubkey = PublicKey(h, p, g, q)
@@ -126,14 +126,15 @@ def _decrypt(ciphertext, privkey):
 	m = (c2*inverse(s, p)) % p
 	return m
 
-def test():
+if __name__ == "__main__":
+	from os import urandom
 	pubkey, privkey = _generate_key()
-	print "h: ", pubkey.h
-	print "p: ", pubkey.p
-	print "g: ", pubkey.g
-	print "q: ", pubkey.q
-	print "x: ", privkey.x
-	print "\n"
-	ct = _encrypt("test string", pubkey)
-	print long_to_bytes(_decrypt(ct, privkey))
-test()
+	for i in range(100):
+		message = chr(1) + urandom(16)
+		ct = _encrypt(message, pubkey)
+		try:
+	 		assert long_to_bytes(_decrypt(ct, privkey)) == message
+		except:
+			print "[-] Something's wrong! Check the implementation!"
+			import sys
+			sys.exit()
