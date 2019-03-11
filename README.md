@@ -144,6 +144,14 @@ Help CTF players and individuals interested in the field of Cryptography provide
 | 1     | [Identification Internals](Identification) | <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/Identification/README.md)</li></ul> | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> |
 | 2 | [Ephemeral Key Authentication](https://github.com/ashutosh1206/Crypton/tree/master/Identification/Ephemeral-Key-Auth) | <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/Identification/Ephemeral-Key-Auth/README.md)</li></ul> | <ul><li>- [ ] </li></ul> | <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Crypton/blob/master/Identification/Ephemeral-Key-Auth/Challenges/)</li></ul>  |
 
+### 10. Diffie Hellman Key Exchange
+
+| S.No. | Topic                       | Explanation                                                                                     | Impl./Exploit | Challenge# |
+|-------|:---------------------------:|:-----------------------------------------------------------------------------------------------:|:------------:|:----------:|
+| 1     | [Diffie Hellman Key Exchange Internals](Diffie-Hellman-Key-Exchange/) | <ul><li>- [x] [\[link\]](Diffie-Hellman-Key-Exchange/README.md)</li></ul> | <ul><li>- [x] [\[link\]](Diffie-Hellman-Key-Exchange/example.py)</li></ul> | <ul><li>- [ ] </li></ul> |
+| 2 | [Small Subgroup Confinement Attacks](Diffie-Hellman-Key-Exchange/Attack-Small-Subgroup-Confinement/) | <ul><li>- [x] [\[link\]](Diffie-Hellman-Key-Exchange/Attack-Small-Subgroup-Confinement/README.md)</li></ul> | <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Matasano-Crypto-Challenges/tree/master/set8/p57)</li></ul> | <ul><li>- [x] [\[link\]](Diffie-Hellman-Key-Exchange/Attack-Small-Subgroup-Confinement/Challenges/)</li></ul>  |
+| 3 | [Invalid Curve Point Attack](Diffie-Hellman-Key-Exchange/Attack-Invalid-Curve-Point) | <ul><li>- [x] [\[link\]](Diffie-Hellman-Key-Exchange/Attack-Invalid-Curve-Point/README.md)</li></ul> | <ul><li>- [x] [\[link\]](https://github.com/ashutosh1206/Matasano-Crypto-Challenges/blob/master/set8/p59/exploit.py)</li></ul> | <ul><li>- [x] [\[link\]](Diffie-Hellman-Key-Exchange/Attack-Invalid-Curve-Point/Challenges/)</li></ul> |
+
 ## TODO
 1. RSA Encryption
    + PKCS1-v1.5 Padded RSA encryption
@@ -161,7 +169,7 @@ Help CTF players and individuals interested in the field of Cryptography provide
    + Linear Feedback Shift Register
 3. Digital Signatures
    + Blinding Attack on RSA Digital Signatures
-4. Diffie Hellman Key Exchange
+4. ~~Diffie Hellman Key Exchange~~[\[Done\]](https://github.com/ashutosh1206/Crypton/tree/master/Diffie-Hellman-Key-Exchange)
    + Elliptic Curve Diffie Hellman
 5. [More to be added]
 
