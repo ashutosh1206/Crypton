@@ -71,7 +71,6 @@ From the scenario discussed in the last section, we know that the service return
 Some observations before we can exploit the vulnerability:
 1. Modulus n = p*q where `p` and `q` are primes. Since primes cannot be even and multiplication of two odd numbers is another odd number, `n` is always odd.
 2. If we multiply any plaintext by multiples of `2`, the result will always be even, regardless of whether the plaintext is even or odd.
-3. Any *even number* % *odd number* is always odd.
 
 Suppose `ct` is the ciphertext of message `m` we want to decrypt, `e` is the public key exponent and `n` is the modulus.  
 
@@ -80,7 +79,7 @@ We can get the plaintext by choosing a ciphertext such that after sending `q` nu
 If we send ![picture](Pictures/3.gif) to the server as the ciphertext (where i=0,1,2,...,(n/e)), it will decrypt to ![picture](Pictures/4.gif) and the server will return ![picture](Pictures/5.gif).
 
 Suppose we send ![picture](Pictures/6.gif) to the server as the ciphertext which will be decrypted to ![picture](Pictures/7.gif). Two cases can arise:  
-1. If `2*m > n`, then the server will return `1` as the output (since 2\*m is even and `1` can be returned only when 2\*m > n, see observation-3) and then we can write `m > n/2`
+1. If `2*m > n`, then the server will return `1` as the output (since 2\*m is even, m < n and `1` would be returned only when 2\*m > n) and then we can write `m > n/2`
 2. If `2*m < n` then the server will return `0` as the output. We can then write `m < n/2`
 
 Consider two messages 2\*m and 4\*m [\[1\]](https://crypto.stackexchange.com/questions/11053/rsa-least-significant-bit-oracle-attack) and let us see under what values of the output, do we get the range of `m`:  
