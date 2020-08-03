@@ -35,7 +35,7 @@ def brute_dlp(g, y, p):
     if y == g:
         return 1
     if sol == y:
-        return y
+        return 2
     i = 3
     while i <= p-1:
         sol = sol*g % p
