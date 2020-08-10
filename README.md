@@ -1,5 +1,10 @@
 # Crypton
 
+[![GitHub issues](https://img.shields.io/github/issues/ashutosh1206/Crypton.svg)](https://github.com/ashutosh1206/Crypton/issues)
+[![GitHub forks](https://img.shields.io/github/forks/ashutosh1206/Crypton.svg)](https://github.com/ashutosh1206/Crypton/network)
+[![GitHub stars](https://img.shields.io/github/stars/ashutosh1206/Crypton.svg)](https://github.com/ashutosh1206/Crypton/stargazers)
+[![Rawsec's CyberSecurity Inventory](https://inventory.rawsec.ml/img/badges/Rawsec-inventoried-FF5050_flat.svg)](https://inventory.rawsec.ml/tools.html#Crypton)
+[![GitHub license](https://img.shields.io/github/license/ashutosh1206/Crypton.svg)](https://github.com/ashutosh1206/Crypton/blob/master/LICENSE)
 
 Crypton is an educational library to **learn** and **practice** Offensive and Defensive Cryptography. It is basically a collection of explanation and implementation of all the existing vulnerabilities and attacks on various Encryption Systems (Symmetric and Asymmetric), Digital Signatures, Message Authentication Codes and Authenticated Encryption Systems. Each attack is also supplemented with example challenges from "Capture The Flag" contests and their respective write-ups. Individuals who are already acquainted (or are into CTFs) with this field can use Crypton as a tool to solve challenges based on a particular existing vulnerability.  
 
