@@ -91,8 +91,9 @@ Consider two messages 2\*m and 4\*m [\[1\]](https://crypto.stackexchange.com/que
 You must be wondering how condition 3 and 4 above hold true. You will understand better when you see the script implementing this:  
 ```python
 e = 65537
-upper_limit = N
+upper_limit = 1
 lower_limit = 0
+denominator = 1
 
 flag = ""
 i = 1
@@ -100,16 +101,21 @@ i = 1
 while i <= 1024:
     chosen_ct = long_to_bytes((bytes_to_long(flag_enc)*pow(2**i, e, N)) % N)
     output = _decrypt(chosen_ct)
+    delta = upper_limit - lower_limit
+    upper_limit *= 2
+    lower_limit *= 2
+    denominator *= 2
     if ord(output[-1]) == 0:
-        upper_limit = (upper_limit + lower_limit)/2
+        upper_limit -= delta
     elif ord(output[-1]) == 1:
-        lower_limit = (lower_limit + upper_limit)/2
+        lower_limit += delta
     else:
         throw Exception
     i += 1
 
 # Decrypted ciphertext
-print long_to_bytes(upper_limit)
+flag = upper_limit * N / denominator
+print long_to_bytes(flag)
 ```
 
 Now try understanding the conditions 3 and 4 using the above script:
@@ -119,7 +125,7 @@ Now try understanding the conditions 3 and 4 using the above script:
 
 It is somewhat similar to binary search algorithm, because our attack is doing the same (lowering the range of `m` until we get `m`), hence the complexity of this attack is **log<sub>2</sub>n**.
 
-Note that the above script messes up the last byte of the plaintext. I am trying to find out why, and will update the README as soon as I get it.
+Note that we keep track of the numerators and denominators separately, or else we end up with a messed up last byte from truncating along the way.
 
 I have written a script illustrating a server vulnerable to this attack, which you can find here: [encrypt.py](encrypt.py). You can also find the script I wrote to attack the above vulnerable service, which you can find here: [exploit.py](exploit.py)  
 
